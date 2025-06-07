@@ -2,8 +2,4 @@ node_modules
 
 build
 dist
-bin
-core
-types 
-utils
-index.ts
+
