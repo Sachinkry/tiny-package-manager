@@ -162,3 +162,42 @@ const downloadPackage = async (packageName: string): Promise<string> => {
 downloadPackage("lodash")
    .then(path => console.log(`Package downloaded to ${path}`))
    .catch(err => console.error("Error downloading package:", err));
+
+
+// npm install p-retry
+// import pRetry from 'p-retry';
+// import https from 'https';
+// import { createWriteStream } from 'fs';
+// import { logError, logInfo } from '../utils/logger';
+// import { cleanupFile } from '../utils/fs';
+
+// export async function downloadTarball(tarballUrl: string, filePath: string): Promise<void> {
+//   const run = () =>
+//     new Promise<void>((resolve, reject) => {
+//       https.get(tarballUrl, { timeout: 30000 }, (res) => {
+//         if (res.statusCode !== 200) {
+//           cleanupFile(filePath);
+//           reject(new Error(`Failed to download tarball: HTTP ${res.statusCode}`));
+//           return;
+//         }
+//         const fileStream = createWriteStream(filePath);
+//         res.pipe(fileStream);
+//         fileStream.on('finish', () => {
+//           fileStream.close();
+//           logInfo(`Downloaded tarball to ${filePath}`);
+//           resolve();
+//         });
+//         fileStream.on('error', (err) => {
+//           cleanupFile(filePath);
+//           fileStream.close();
+//           logError(`Stream error while downloading tarball`, err);
+//           reject(err);
+//         });
+//       }).on('error', (err) => {
+//         cleanupFile(filePath);
+//         logError(`Failed to download tarball`, err);
+//         reject(err);
+//       });
+//     });
+//   return pRetry(run, { retries: 3 });
+// }

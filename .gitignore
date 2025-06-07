@@ -3,3 +3,4 @@ node_modules
 build
 dist
 
+src/__test__

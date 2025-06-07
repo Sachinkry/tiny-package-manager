@@ -22,6 +22,6 @@ export async function downloadPackage(packageName: string): Promise<string> {
 }
 
 // Temporary entry point for testing
-downloadPackage('smallest')
-  .then((path) => console.log(`Package downloaded to ${path}`))
-  .catch((err) => console.error('Error downloading package:', err));
+// downloadPackage('smallest')
+//   .then((path) => console.log(`Package downloaded to ${path}`))
+//   .catch((err) => console.error('Error downloading package:', err));

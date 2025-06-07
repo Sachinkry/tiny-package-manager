@@ -7,16 +7,22 @@
     "build": "tsup",
     "watch": "tsup --watch",
     "start": "npm run build && node build/index.js",
-    "cli": "node build/bin/cli.js"
+    "cli": "node build/bin/tinypm.js",
+    "test": "vitest run"
+  },
+  "bin": {
+    "tinypm": "./build/bin/tinypm.js"
   },
   "type": "module",
   "devDependencies": {
     "@types/node": "^22.15.30",
     "@types/tar": "^6.1.13",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
   },
   "dependencies": {
+    "commander": "^14.0.0",
     "tar": "^7.4.3"
   }
 }
