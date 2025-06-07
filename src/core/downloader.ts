@@ -1,7 +1,7 @@
 import https from "https";
 import { createWriteStream } from "fs";
-import { logError, logInfo } from "../utils/logger.js";
-import { cleanupFile } from "../utils/fs.js";
+import { logError, logInfo } from "../utils/logger";
+import { cleanupFile } from "../utils/fs";
 
 // TODO: add p-retry to handle network errors
 

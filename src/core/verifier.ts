@@ -1,6 +1,6 @@
 import { createReadStream } from 'fs';
 import crypto from 'crypto';
-import { logError, logInfo } from '../utils/logger.js';
+import { logError, logInfo } from '../utils/logger';
 
 export async function verifyIntegrity(filePath: string, integrity: string): Promise<void> {
   return new Promise((resolve, reject) => {

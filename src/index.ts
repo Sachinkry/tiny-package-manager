@@ -1,9 +1,9 @@
-import { downloadTarball } from "./core/downloader.js";
-import { extractTarball } from "./core/extractor.js";
-import { getPackageMetadata } from "./core/registry.js";
-import { verifyIntegrity } from "./core/verifier.js";
-import { ensureDirectories, TARBALL_DIR } from "./utils/fs.js";
-import { logInfo } from "./utils/logger.js";
+import { downloadTarball } from "./core/downloader";
+import { extractTarball } from "./core/extractor";
+import { getPackageMetadata } from "./core/registry";
+import { verifyIntegrity } from "./core/verifier";
+import { ensureDirectories, TARBALL_DIR } from "./utils/fs";
+import { logInfo } from "./utils/logger";
 
 
 export async function downloadPackage(packageName: string): Promise<string> {
@@ -22,8 +22,6 @@ export async function downloadPackage(packageName: string): Promise<string> {
 }
 
 // Temporary entry point for testing
-if (require.main === module) {
-  downloadPackage('lodash')
-    .then((path) => console.log(`Package downloaded to ${path}`))
-    .catch((err) => console.error('Error downloading package:', err));
-}
+downloadPackage('smallest')
+  .then((path) => console.log(`Package downloaded to ${path}`))
+  .catch((err) => console.error('Error downloading package:', err));

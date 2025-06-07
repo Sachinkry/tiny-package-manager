@@ -1,11 +1,11 @@
 {
-  "name": "tiny-package-manager: zynx",
+  "name": "tiny-package-manager",
   "version": "1.0.0",
   "description": "A minimal TypeScript package manager for learning",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
+    "build": "tsup",
+    "watch": "tsup --watch",
     "start": "npm run build && node build/index.js",
     "cli": "node build/bin/cli.js"
   },
@@ -13,7 +13,8 @@
   "devDependencies": {
     "@types/node": "^22.15.30",
     "@types/tar": "^6.1.13",
-    "tsup": "^8.5.0"
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "tar": "^7.4.3"

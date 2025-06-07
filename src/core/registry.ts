@@ -1,6 +1,6 @@
 import { writeFile } from "node:fs/promises";
-import type { PackageMetadata } from "../types/index.js";
-import { logError, logInfo } from "../utils/logger.js";
+import type { PackageMetadata } from "../types/index";
+import { logError, logInfo } from "../utils/logger";
 
 const NPM_REGISTRY_URL = "https://registry.npmjs.org";
 
